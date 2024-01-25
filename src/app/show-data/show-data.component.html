@@ -1,0 +1,16 @@
+<div class="signup-container">
+    <button type="submit" (click)="onClick()">Show all data of db</button>
+    <table border="1" *ngIf="buttonClicked">
+        <th>UserName</th>
+        <th>Email</th>
+        <th>password</th>
+        @for(item of mydata; track item)
+        {
+        <tr>
+            <td>{{item.usn}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.pass}}</td>
+        </tr>
+        }
+    </table>
+</div>
